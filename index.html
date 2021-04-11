@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fluorescent Test</title>
+
+  <link rel="stylesheet" href="./assets/styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+
+  <main>
+    <div class="images">
+      <div class="images__wrapper">
+        <div class="glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="images__block glide__slide">
+                <img src="./assets/images/red-clits.png" alt="" class="images__image" data-image="red">
+              </li>
+              <li class="images__block glide__slide">
+                <img src="./assets/images/green-clits.png" alt="" class="images__image" data-image="green">
+              </li>
+              <li class="images__block glide__slide">
+                <img src="./assets/images/grey-clits.png" alt="" class="images__image" data-image="grey">
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="controls__info">
+        <div class="controls__info-wrapper">
+          <h3 class="controls__title title--large">Red Flyknit Trainers</h3>
+          <p class="controls__price font--normal">$190.00</p>
+        </div>
+      </div>
+
+      <div class="controls__sizing">
+        <div class="controls__sizing-header">
+          <p class="controls__sizing-title title--small">Size</p>
+        </div>
+        <div class="controls__sizing-wrapper">
+          <div class="controls__sizing-contents">
+            <div class="controls__sizing-button-block">
+              <button class="btn btn--primary font--normal btn--primary-active" data-button="s">Small</button>
+            </div>
+            <div class="controls__sizing-button-block">
+              <button class="btn btn--primary font--normal" data-button="m">Medium</button>
+            </div>
+            <div class="controls__sizing-button-block">
+              <button class="btn btn--primary font--normal" data-button="l">Large</button>
+            </div>
+            <div class="controls__sizing-button-block">
+              <button class="btn btn--primary font--normal" data-button="xl">Extra Large</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls__colors">
+        <div class="controls__colors-header">
+          <p class="controls__colors-title title--small">Colour</p>
+        </div>
+        <div class="controls__colors-wrapper">
+          <div class="controls__colors-contents">
+            <div class="controls__colors-button-block">
+              <button class="btn btn--colored btn--colored-red btn--colored-active" data-color="red"></button>
+            </div>
+            <div class="controls__colors-button-block">
+              <button class="btn btn--colored btn--colored-green" data-color="green"></button>
+            </div>
+            <div class="controls__colors-button-block">
+              <button class="btn btn--colored btn--colored-grey" data-color="grey"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls__atc">
+        <div class="controls__atc-wrapper">
+          <button class="btn btn--cta font--normal">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+  <script src="./assets/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+@mixin mq-max($point) {
+  @if $point == mobile {
+    @media (max-width: $mobile) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media (max-width: $tablet) {
+      @content;
+    }
+  } @else if $point == desktop {
+    @media (max-width: $desktop) {
+      @content;
+    }
+  } @else if $point == widescreen {
+    @media (max-width: $widescreen) {
+      @content;
+    }
+  } @else if $point == fullhd {
+    @media (max-width: $fullhd) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $point) {
+      @content;
+    }
+  }
+}

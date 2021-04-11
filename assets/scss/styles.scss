@@ -1,0 +1,10 @@
+// Partials
+
+@use './partials/reset';
+@use './partials/variables';
+@use './partials/mixins';
+@use './partials/global';
+
+// components
+@use './components/comp-image.scss';
+@use './components/comp-controls.scss';

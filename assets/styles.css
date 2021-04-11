@@ -1,0 +1,237 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  max-width: 144rem;
+  margin: 0 auto;
+}
+
+main {
+  display: flex;
+  padding: 4rem;
+}
+
+.title--large {
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  color: #1D1D1D;
+}
+
+.title--small {
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 28px;
+  color: #1D1D1D;
+}
+
+.font--normal {
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: #1D1D1D;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.btn--primary {
+  border-radius: 38px;
+  padding: 0.8rem 1.5rem;
+}
+.btn--primary:hover {
+  background-color: #1D1D1D;
+  color: #fff;
+}
+.btn--primary-active {
+  background-color: #1D1D1D;
+  color: #fff;
+}
+.btn--colored {
+  border-radius: 50%;
+  border: 1px solid #DFDFDF;
+  position: relative;
+}
+.btn--colored-active {
+  border: 1px solid #1D1D1D;
+}
+.btn--colored:hover {
+  border: 1px solid #1D1D1D;
+}
+.btn--colored:before {
+  content: "";
+  position: absolute;
+  padding: 5px;
+  background-color: red;
+  border-radius: 50%;
+  height: 1.3rem;
+  width: 1.21rem;
+  top: 2.4px;
+  left: 2.2px;
+}
+.btn--colored-red:before {
+  background-image: linear-gradient(-45deg, #ac5941 50%, #8a3e28 50%);
+}
+.btn--colored-green:before {
+  background-image: linear-gradient(-45deg, #429FAC 50%, #3C858F 50%);
+}
+.btn--colored-grey:before {
+  background-image: linear-gradient(-45deg, #416DAC 50%, #1F2F7E 50%);
+}
+.btn--cta {
+  background-color: #fff;
+  border: 1px solid #DFDFDF;
+  width: 100%;
+  padding: 1.2rem 0;
+  border-radius: 2.8rem;
+}
+.btn--cta:hover {
+  background-color: #1D1D1D;
+  color: #fff;
+}
+
+@keyframes showFromBottom {
+  50% {
+    opacity: 0.5;
+    transform: translateY(-5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+.images {
+  max-width: 90.4rem;
+  flex-basis: 65%;
+}
+.images__wrapper {
+  max-width: 100%;
+  overflow: hidden;
+}
+.images__wrapper .glide__slides {
+  display: flex;
+}
+.images__block {
+  position: relative;
+  transition: 0.25s all ease-in-out;
+  cursor: pointer;
+}
+.images__block:after {
+  content: "";
+  opacity: 0;
+  transform: translateY(25%);
+}
+.images__block:hover:after {
+  content: url("/assets/images/zoom.svg");
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 1rem 1.2rem;
+  animation: showFromBottom 0.5s forwards;
+}
+.images__image {
+  width: 100%;
+}
+
+.controls {
+  padding: 4rem 5rem;
+}
+.controls__sizing {
+  margin-top: 4rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #DFDFDF;
+}
+.controls__sizing-title {
+  margin-bottom: 0.8rem;
+}
+.controls__sizing-contents {
+  display: flex;
+}
+.controls__sizing-button-block:not(:first-child) {
+  margin-left: 0.8rem;
+}
+.controls__colors {
+  margin-top: 2rem;
+}
+.controls__colors-title {
+  margin-bottom: 0.8rem;
+}
+.controls__colors-contents {
+  display: flex;
+}
+.controls__colors-button-block:not(:first-child) {
+  margin-left: 0.8rem;
+}
+.controls__colors-button-block .btn {
+  width: 2.9rem;
+  height: 2.9rem;
+}
+.controls__atc {
+  margin-top: 4rem;
+}

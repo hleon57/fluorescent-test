@@ -1,0 +1,121 @@
+@use './variables' as *;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  max-width: 144rem;
+  margin: 0 auto;
+}
+
+main {
+  display: flex;
+  padding: 4rem;
+}
+
+// fonts
+
+.title--large {
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  color: $color--black;
+}
+
+.title--small {
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 28px;
+  color: $color--black;
+}
+
+.font--normal {
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: $color--black;
+}
+
+// Buttons
+
+.btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  &--primary {
+    border-radius: 38px;
+    padding: 0.8rem 1.5rem;
+    &:hover {
+      background-color: $color--black;
+      color: $color--white;
+    }
+    &-active {
+      background-color: $color--black;
+      color: $color--white;
+    }
+  }
+  &--colored {
+    border-radius: 50%;
+    border: 1px solid $color--grey;
+    position: relative;
+    &-active {
+      border: 1px solid $color--black;
+    }
+    &:hover {
+      border: 1px solid $color--black;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      padding: 5px;
+      background-color: red;
+      border-radius: 50%;
+      height: 1.3rem;
+      width: 1.21rem;
+      top: 2.4px;
+      left: 2.2px;
+    }
+    &-red:before {
+      background-image: linear-gradient(-45deg, #ac5941 50%, #8a3e28 50%);
+    }
+    &-green:before {
+      background-image: linear-gradient(-45deg, #429FAC 50%, #3C858F 50%);
+    }
+    &-grey:before {
+      background-image: linear-gradient(-45deg, #416DAC 50%, #1F2F7E 50%);
+    }
+  }
+  &--cta {
+    background-color: $color--white;
+    border: 1px solid $color--grey;
+    width: 100%;
+    padding: 1.2rem 0;
+    border-radius: 2.8rem;
+    &:hover {
+      background-color: $color--black;
+      color: $color--white;
+    }
+    
+  }
+}
+
+// Animations
+
+@keyframes showFromBottom {
+  50% {
+    opacity: 0.5;
+    transform: translateY(-5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}

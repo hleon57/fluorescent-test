@@ -1,0 +1,42 @@
+@use '../partials/variables' as *;
+@use '../partials/global' as *;
+
+.images {
+  max-width: 90.4rem;
+  flex-basis: 65%;
+  &__wrapper {
+    max-width: 100%;
+    overflow: hidden;
+    .glide__slides {
+      display: flex;
+    }
+  }
+  &__block {
+    position: relative;
+    transition: 0.25s all ease-in-out;
+    cursor: pointer;
+    &:after {
+      content: '';
+      opacity: 0;
+      transform: translateY(25%);
+    }
+    &:hover {
+      &:after {
+        content: url('/assets/images/zoom.svg');
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        background-color: $color--white;
+        border-radius: 50%;
+        padding: 1rem 1.2rem;
+        animation: showFromBottom .5s forwards;
+      }
+    }
+    // &:not(:first-child) {
+    //   display: none;
+    // }
+  }
+  &__image {
+    width: 100%;
+  }
+}

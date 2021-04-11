@@ -1,0 +1,43 @@
+@use '../partials/variables' as *;
+
+.controls {
+  padding: 4rem 5rem;
+  &__sizing {
+    margin-top: 4rem;
+    padding-bottom: 2rem; 
+    border-bottom: 1px solid $color--grey;
+    &-title {
+      margin-bottom: 0.8rem;
+    }
+  }
+  &__sizing-contents {
+    display: flex;
+  }
+  &__sizing-button-block {
+    &:not(:first-child) {
+      margin-left: 0.8rem;
+    }
+  }
+
+  &__colors {
+    margin-top: 2rem;
+    &-title {
+      margin-bottom: 0.8rem;
+    }
+  }
+  &__colors-contents {
+    display: flex;
+  }
+  &__colors-button-block {
+    &:not(:first-child) {
+      margin-left: 0.8rem;
+    }
+    .btn {
+      width: 2.9rem;
+      height: 2.9rem;
+    }
+  }
+  &__atc {
+    margin-top: 4rem;
+  }
+}
